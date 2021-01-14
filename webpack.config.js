@@ -3,7 +3,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const {loader} = require('mini-css-extract-plugin')
 
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
@@ -21,7 +20,7 @@ const jsLoaders = () => {
   ]
 
   if (isDev) {
-    loader.push('eslint-loader')
+    loaders.push('eslint-loader')
   }
 
   return loaders
@@ -54,7 +53,7 @@ module.exports = {
       filename: filename('css')
     }),
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'index.pug',
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd
@@ -83,6 +82,10 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: jsLoaders()
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       }
     ],
   },
