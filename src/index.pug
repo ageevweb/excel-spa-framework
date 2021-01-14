@@ -4,13 +4,19 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     title PureJsExcelApp
   body
     #app.container
       .excel
         .excel__header
+          input.input(value="New table")
+          div
+            .button
+              .material-icons delete
+            .button
+              .material-icons exit_to_app
+
         .excel__toolbar
         .excel__formula
         .excel__table
-      
-      h1 Test
