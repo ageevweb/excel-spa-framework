@@ -34,4 +34,25 @@ html(lang="en")
         .excel__formula
           .info fx
           .input(contenteditable spellcheck="false")
+
         .excel__table
+          .row
+            .row-info
+            .row-data
+              .column A
+              .column B
+              .column C
+              .column D
+          .row
+            .row-info 1
+            .row-data
+              .cell.selected(contenteditable) A1 
+              .cell(contenteditable) B1
+              .cell(contenteditable) C1
+          .row
+            .row-info 2
+            .row-data
+              .cell(contenteditable) A2
+              .cell(contenteditable) B2
+              .cell(contenteditable) C2
+
