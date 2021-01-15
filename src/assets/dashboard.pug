@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    title PureJsExcelApp
+  body
+    #app
+      .db
+        .db__header
+          h1 Excel Dashboard
+        
+        .db__new
+          .db__view
+            a(href="#").db__create New <br> table
+        
+        .db__table.db-view
+          .db__list-header
+            span Name
+            span Last open
+
+          ul.db__list
+            li.db__record 
+              a(href="#") table #1
+              strong 12.01.2021
+            li.db__record 
+              a(href="#") table #1
+              strong 12.01.2021
+            li.db__record 
+              a(href="#") table #1
+              strong 12.01.2021
