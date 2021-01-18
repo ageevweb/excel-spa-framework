@@ -16,6 +16,7 @@
   }
 
   .row-info {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,6 +32,7 @@
   }
 
   .column {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,6 +59,38 @@
     &.selected {
       border: none;
       outline: 2px solid red;
+    }
+  }
+
+  .col-resize, .row-resize {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: gold;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .col-resize {
+    top: 0;
+    width: 4px;
+
+    &:hover {
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    height: 4px;
+    width: 100%;
+
+    &:first-child
+
+    &:hover {
+      cursor: row-resize;
     }
   }
 }
