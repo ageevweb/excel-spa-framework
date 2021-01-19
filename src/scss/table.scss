@@ -68,9 +68,10 @@
     right: 0;
     background: gold;
     opacity: 0;
+    z-index: 1000;
 
     &:hover {
-      opacity: 1;
+      opacity: 1 !important;
     }
   }
 
@@ -85,7 +86,7 @@
 
   .row-resize {
     height: 4px;
-    width: 100%;
+    left: 0;
 
     &:hover {
       cursor: row-resize;
